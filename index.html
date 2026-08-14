@@ -24,7 +24,7 @@
         
         /* 로고 스타일 정의 */
         .logo { display: flex; align-items: center; }
-        .logo img { height: 100px; width: auto; object-fit: contain; }
+        .logo img { height: 45px; width: auto; object-fit: contain; }
 
         .nav-menu { display: flex; list-style: none; gap: 1.5rem; }
         .nav-menu a { font-weight: 500; transition: color 0.3s; }
@@ -32,7 +32,7 @@
 
         /* 메인 히어로 섹션 */
         .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; 
             min-height: 70vh; 
             display: flex; 
             flex-direction: column; 
@@ -51,15 +51,85 @@
         section { max-width: 1200px; margin: 4rem auto; padding: 0 1.5rem; }
         .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 2.5rem; color: #1e3a8a; }
 
-        /* Giới thiệu (소개) 섹션 스타일 */
-        .about-container { display: grid; grid-template-columns: 1fr 1fr; gap: 2.5rem; align-items: center; }
-        .about-image img { width: 100%; border-radius: 10px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); object-fit: cover; height: 100%; min-height: 380px; }
-        .about-content h3 { font-size: 1.4rem; color: #2563eb; margin-bottom: 1rem; font-weight: 700; }
-        .about-content p { margin-bottom: 1rem; color: #475569; text-align: justify; }
-        .about-highlights { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 1.5rem; text-align: center; }
-        .highlight-box { background: #f1f5f9; padding: 1rem; border-radius: 8px; }
-        .highlight-box h4 { font-size: 1.2rem; color: #1e3a8a; font-weight: 700; }
-        .highlight-box p { font-size: 0.85rem; margin-bottom: 0; text-align: center; }
+        /* ==========================================
+           🎨 Giới thiệu (회사 소개) - 대형 배경 & 텍스트 레이어 겹침 스타일
+           ========================================== */
+        .about-section {
+            position: relative;
+            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
+                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
+            padding: 5rem 2rem;
+            border-radius: 16px;
+            color: #fff;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin-top: 3rem;
+            margin-bottom: 4rem;
+        }
+
+        .about-overlay-card {
+            max-width: 900px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 3rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        .about-overlay-card h2 {
+            font-size: 2rem;
+            color: #60a5fa;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .about-overlay-card h3 {
+            font-size: 1.25rem;
+            color: #f8fafc;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-weight: 400;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            padding-bottom: 1rem;
+        }
+
+        .about-overlay-card p {
+            margin-bottom: 1.2rem;
+            color: #e2e8f0;
+            text-align: justify;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .about-highlights { 
+            display: grid; 
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 1.5rem; 
+            margin-top: 2.5rem; 
+        }
+
+        .highlight-box { 
+            background: rgba(255, 255, 255, 0.15); 
+            padding: 1.2rem; 
+            border-radius: 8px; 
+            text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .highlight-box h4 { 
+            font-size: 1.4rem; 
+            color: #93c5fd; 
+            font-weight: 700; 
+        }
+
+        .highlight-box p { 
+            font-size: 0.9rem; 
+            margin-bottom: 0; 
+            text-align: center;
+            color: #cbd5e1;
+        }
 
         /* 주요 서비스 섹션 */
         .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1.5rem; }
@@ -100,10 +170,13 @@
             .hero p { font-size: 0.95rem; }
             .btn-cta { padding: 0.7rem 1.5rem; font-size: 0.95rem; }
             
-            /* 모바일 소개 섹션 레이아웃 변경 */
-            .about-container { grid-template-columns: 1fr; }
-            .about-highlights { grid-template-columns: 1fr; gap: 0.5rem; }
-            .about-image img { min-height: auto; height: 250px; }
+            /* 모바일 소개 영역 대응 */
+            .about-section { padding: 2rem 1rem; background-attachment: scroll; }
+            .about-overlay-card { padding: 1.5rem 1rem; }
+            .about-overlay-card h2 { font-size: 1.5rem; }
+            .about-overlay-card h3 { font-size: 1.05rem; }
+            .about-overlay-card p { font-size: 0.95rem; }
+            .about-highlights { grid-template-columns: 1fr; gap: 0.8rem; }
 
             .zalo-float { bottom: 15px; right: 15px; padding: 8px 14px; font-size: 0.85rem; }
         }
@@ -133,38 +206,37 @@
         <a href="https://zalo.me/0123456789" target="_blank" class="btn-cta">Nhận tư vấn miễn phí</a>
     </section>
 
-    <!-- 3. Giới thiệu (회사 소개) 섹션 -->
-    <section id="about">
-        <h2 class="section-title">Giới Thiệu Công Ty</h2>
-        <div class="about-container">
-            <div class="about-image">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=1000&q=80" alt="Thi công xây dựng tại Đà Nẵng">
-            </div>
-            <div class="about-content">
-                <h3>10 Năm Kinh Nghiệm & Uy Tín – Kiến Tạo Không Gian Sống Hoàn Hảo</h3>
-                <p>
-                    Với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng và nội thất, chúng tôi đã thực hiện thành công nhiều dự án xây dựng nhà ở và thi công nội thất tại Đà Nẵng. Qua nhiều năm hoạt động, chúng tôi không ngừng tích lũy kinh nghiệm thực tế, nâng cao năng lực chuyên môn và hoàn thiện quy trình thi công nhằm mang đến cho khách hàng những công trình chất lượng và bền vững.
-                </p>
-                <p>
-                    Đặc biệt, với sự am hiểu sâu sắc về điều kiện khí hậu, môi trường xây dựng, vật liệu và đặc thù thi công tại Đà Nẵng, chúng tôi có khả năng đưa ra những giải pháp phù hợp với từng công trình, tối ưu chi phí và đảm bảo hiệu quả sử dụng lâu dài.
-                </p>
-                <p>
-                    Chúng tôi luôn đặt uy tín, chất lượng và trách nhiệm lên hàng đầu. Ngôi nhà và không gian mà bạn mơ ước – chúng tôi đồng hành cùng bạn từ những bước đầu tiên cho đến khi công trình hoàn thiện.
-                </p>
-                
-                <div class="about-highlights">
-                    <div class="highlight-box">
-                        <h4>10+ Năm</h4>
-                        <p>Kinh nghiệm</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>Đà Nẵng</h4>
-                        <p>Am hiểu địa phương</p>
-                    </div>
-                    <div class="highlight-box">
-                        <h4>100%</h4>
-                        <p>Tận tâm & Trách nhiệm</p>
-                    </div>
+    <!-- 3. Giới thiệu (회사 소개) 섹션 - 사진 배경 + 카드 겹침 디자인 -->
+    <section id="about" class="about-section">
+        <div class="about-overlay-card">
+            <h2>GIỚI THIỆU CÔNG TY</h2>
+            <h3>10 năm kinh nghiệm và uy tín – Kiến tạo những không gian sống hoàn hảo.</h3>
+            
+            <p>
+                Với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng và nội thất, chúng tôi đã thực hiện thành công nhiều dự án xây dựng nhà ở và thi công nội thất tại Đà Nẵng. Qua nhiều năm hoạt động, chúng tôi không ngừng tích lũy kinh nghiệm thực tế, nâng cao năng lực chuyên môn và hoàn thiện quy trình thi công nhằm mang đến cho khách hàng những công trình chất lượng và bền vững.
+            </p>
+            <p>
+                Chúng tôi không chỉ đơn thuần xây dựng một ngôi nhà, mà luôn hướng đến việc tạo nên một không gian sống có giá trị, phù hợp với phong cách, nhu cầu và gu thẩm mỹ riêng của từng khách hàng. Từ khâu tư vấn, thiết kế, xây dựng đến thi công nội thất và hoàn thiện, mọi công đoạn đều được thực hiện một cách cẩn thận, chuyên nghiệp và đồng bộ.
+            </p>
+            <p>
+                Đặc biệt, với sự am hiểu sâu sắc về điều kiện khí hậu, môi trường xây dựng, vật liệu và đặc thù thi công tại Đà Nẵng, chúng tôi có khả năng đưa ra những giải pháp phù hợp với từng công trình, tối ưu chi phí và đảm bảo hiệu quả sử dụng lâu dài.
+            </p>
+            <p>
+                Chúng tôi luôn đặt uy tín, chất lượng và trách nhiệm lên hàng đầu. Trong suốt quá trình thực hiện, chúng tôi luôn đề cao sự minh bạch, tận tâm và trách nhiệm đối với từng công trình.
+            </p>
+
+            <div class="about-highlights">
+                <div class="highlight-box">
+                    <h4>10+ Năm</h4>
+                    <p>Kinh nghiệm thực tế</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>Đà Nẵng</h4>
+                    <p>Am hiểu địa phương</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>100%</h4>
+                    <p>Tận tâm & Bền vững</p>
                 </div>
             </div>
         </div>
