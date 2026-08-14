@@ -86,19 +86,19 @@
         .highlight-box p { font-size: 0.9rem; margin-bottom: 0; text-align: center; color: #cbd5e1; }
 
         /* ==========================================
-           🎨 Dịch vụ (서비스) 섹션 고급 스타일
+           🎨 Dịch vụ (서비스) 섹션 - 3개 1줄 컴팩트 카드 스타일
            ========================================== */
         .service-grid { 
             display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 2rem; 
+            grid-template-columns: repeat(3, 1fr); /* PC 화면에서 정확히 3개 한 줄 배치 */
+            gap: 1.5rem; 
         }
 
         .service-card { 
             background: #fff; 
-            border-radius: 12px; 
+            border-radius: 10px; 
             overflow: hidden; 
-            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
             border: 1px solid #e2e8f0; 
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex;
@@ -106,13 +106,14 @@
         }
 
         .service-card:hover { 
-            transform: translateY(-8px); 
-            box-shadow: 0 12px 25px rgba(37, 99, 235, 0.15); 
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12); 
             border-color: #93c5fd;
         }
 
+        /* 이미지 높이를 줄여 전체 카드 높이 축소 */
         .service-card-img { 
-            height: 220px; 
+            height: 160px; 
             overflow: hidden; 
             position: relative; 
         }
@@ -125,29 +126,29 @@
         }
 
         .service-card:hover .service-card-img img { 
-            transform: scale(1.08); 
+            transform: scale(1.06); 
         }
 
+        /* 패딩을 조절하여 카드 크기 슬림화 */
         .service-card-content { 
-            padding: 2rem; 
+            padding: 1.2rem 1.2rem 1.5rem; 
             flex-grow: 1;
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
         }
 
         .service-card-content h3 { 
-            font-size: 1.35rem; 
+            font-size: 1.15rem; 
             color: #0f172a; 
-            margin-bottom: 1rem; 
+            margin-bottom: 0.6rem; 
             font-weight: 700;
         }
 
         .service-card-content p { 
             color: #64748b; 
-            font-size: 1rem; 
-            line-height: 1.7; 
-            text-align: justify;
+            font-size: 0.92rem; 
+            line-height: 1.6; 
+            text-align: left;
         }
 
         /* 하단 푸터 */
@@ -174,6 +175,12 @@
         .zalo-float:hover { transform: scale(1.05); }
 
         /* 모바일 최적화 반응형 스타일 */
+        @media (max-width: 992px) {
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr); /* 태블릿에서는 2개 배치 */
+            }
+        }
+
         @media (max-width: 768px) {
             .navbar { flex-direction: column; gap: 0.8rem; padding: 0.8rem 1rem; }
             .logo img { height: 70px !important; max-width: 90%; }
@@ -190,8 +197,8 @@
             .about-overlay-card p { font-size: 0.95rem; }
             .about-highlights { grid-template-columns: 1fr; gap: 0.8rem; }
 
-            .service-grid { grid-template-columns: 1fr; }
-            .service-card-img { height: 180px; }
+            .service-grid { grid-template-columns: 1fr; } /* 모바일에서는 1개씩 표시 */
+            .service-card-img { height: 160px; }
 
             .zalo-float { bottom: 15px; right: 15px; padding: 8px 14px; font-size: 0.85rem; }
         }
@@ -260,7 +267,7 @@
         </div>
     </section>
 
-    <!-- 4. Dịch vụ (주요 서비스) 섹션 - 고급 카드형 디자인 -->
+    <!-- 4. Dịch vụ (주요 서비스) 섹션 - 컴팩트 3컬럼 디자인 -->
     <section class="services" id="services">
         <h2 class="section-title">DỊCH VỤ CỦA CHÚNG TÔI</h2>
         <div class="service-grid">
@@ -279,7 +286,7 @@
             <!-- 서비스 2: 주택 올인원 신축 -->
             <div class="service-card">
                 <div class="service-card-img">
-                    <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b7?auto=format&fit=crop&w=800&q=80" alt="Xây nhà trọn gói">
+                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Xây nhà trọn gói">
                 </div>
                 <div class="service-card-content">
                     <h3>Xây nhà trọn gói</h3>
@@ -290,7 +297,7 @@
             <!-- 서비스 3: 리모델링 & 수리 -->
             <div class="service-card">
                 <div class="service-card-img">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Cải tạo & Sửa chữa nhà ở">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cải tạo & Sửa chữa nhà ở">
                 </div>
                 <div class="service-card-content">
                     <h3>Cải tạo & Sửa chữa nhà ở</h3>
