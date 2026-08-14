@@ -1,223 +1,138 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mixa88.com - Xây Dựng & Thiết Kế Nội Thất Chuyên Nghiệp</title>
-  
-  <!-- 베트남어 지원 Google Fonts (Roboto) & FontAwesome 아이콘 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mixa88.com - Xây Dựng & Thiết Kế Nội Thất Chuyên Nghiệp</title>
+    
+    <!-- 베트남어 지원 Google Fonts (Roboto) & FontAwesome 아이콘 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        /* 기본 스타일 초기화 */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Roboto', sans-serif; color: #333; line-height: 1.6; }
+        a { text-decoration: none; color: inherit; }
 
-  <style>
-    /* 기본 스타일 초기화 */
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: 'Roboto', sans-serif;
-      color: #333;
-      line-height: 1.6;
-    }
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+        /* 헤더 & 네비게이션 */
+        header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
+        .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 2rem; }
+        
+        /* 로고 스타일 정의 */
+        .logo { display: flex; align-items: center; }
+        .logo img { height: 45px; width: auto; object-fit: contain; } /* 높이 45px 기준으로 자동 비율 조절 */
 
-    /* 헤더 & 네비게이션 */
-    header {
-      background: #fff;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .navbar {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 1rem 2rem;
-    }
-    .logo {
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: #1e3a8a;
-      letter-spacing: -0.5px;
-    }
-    .nav-menu {
-      display: flex;
-      list-style: none;
-      gap: 2rem;
-    }
-    .nav-menu a {
-      font-weight: 500;
-      transition: color 0.3s;
-    }
-    .nav-menu a:hover {
-      color: #2563eb;
-    }
+        .nav-menu { display: flex; list-style: none; gap: 2rem; }
+        .nav-menu a { font-weight: 500; transition: color 0.3s; }
+        .nav-menu a:hover { color: #2563eb; }
 
-    /* 메인 히어로 섹션 */
-    .hero {
-      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
-                  url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-      height: 70vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      color: #fff;
-      padding: 0 1rem;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      margin-bottom: 1rem;
-      font-weight: 700;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-    .btn-cta {
-      background: #2563eb;
-      color: #fff;
-      padding: 0.8rem 2rem;
-      font-size: 1.1rem;
-      border-radius: 5px;
-      font-weight: 500;
-      transition: background 0.3s;
-    }
-    .btn-cta:hover {
-      background: #1d4ed8;
-    }
+        /* 메인 히어로 섹션 */
+        .hero { 
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat; 
+            height: 70vh; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            text-align: center; 
+            color: #fff; 
+            padding: 0 1rem; 
+        }
+        .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; font-weight: 700; }
+        .hero p { font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; }
+        .btn-cta { background: #2563eb; color: #fff; padding: 0.8rem 2rem; font-size: 1.1rem; border-radius: 5px; font-weight: 500; transition: background 0.3s; }
+        .btn-cta:hover { background: #1d4ed8; }
 
-    /* 주요 서비스 섹션 */
-    .services {
-      max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 2rem;
-    }
-    .section-title {
-      text-align: center;
-      font-size: 2rem;
-      margin-bottom: 3rem;
-      color: #1e3a8a;
-    }
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-    }
-    .service-card {
-      background: #f8fafc;
-      padding: 2rem;
-      border-radius: 8px;
-      border: 1px solid #e2e8f0;
-      text-align: center;
-    }
-    .service-card i {
-      font-size: 2.5rem;
-      color: #2563eb;
-      margin-bottom: 1rem;
-    }
-    .service-card h3 {
-      font-size: 1.3rem;
-      margin-bottom: 0.5rem;
-    }
+        /* 주요 서비스 섹션 */
+        .services { max-width: 1200px; margin: 4rem auto; padding: 0 2rem; }
+        .section-title { text-align: center; font-size: 2rem; margin-bottom: 3rem; color: #1e3a8a; }
+        .service-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: #f8fafc; padding: 2rem; border-radius: 8px; border: 1px solid #e2e8f0; text-align: center; }
+        .service-card i { font-size: 2.5rem; color: #2563eb; margin-bottom: 1rem; }
+        .service-card h3 { font-size: 1.3rem; margin-bottom: 0.5rem; }
 
-    /* 하단 푸터 */
-    footer {
-      background: #0f172a;
-      color: #94a3b8;
-      text-align: center;
-      padding: 2rem;
-      margin-top: 4rem;
-    }
+        /* 하단 푸터 */
+        footer { background: #0f172a; color: #94a3b8; text-align: center; padding: 2rem; margin-top: 4rem; }
 
-    /* 베트남 현지 필수: Zalo 플로팅 버튼 */
-    .zalo-float {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #0068ff;
-      color: white;
-      border-radius: 50px;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-      font-weight: bold;
-      z-index: 1000;
-      transition: transform 0.3s;
-    }
-    .zalo-float:hover {
-      transform: scale(1.05);
-    }
-  </style>
+        /* 베트남 현지 필수: Zalo 플로팅 버튼 */
+        .zalo-float { 
+            position: fixed; 
+            bottom: 20px; 
+            right: 20px; 
+            background: #0068ff; 
+            color: white; 
+            border-radius: 50px; 
+            padding: 12px 20px; 
+            display: flex; 
+            align-items: center; 
+            gap: 8px; 
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3); 
+            font-weight: bold; 
+            z-index: 1000; 
+            transition: transform 0.3s; 
+        }
+        .zalo-float:hover { transform: scale(1.05); }
+    </style>
 </head>
 <body>
 
-  <!-- 1. 네비게이션 바 -->
-  <header>
-    <nav class="navbar">
-      <div class="logo">Mixa88.com</div>
-      <ul class="nav-menu">
-        <li><a href="#home">Trang chủ</a></li>
-        <li><a href="#about">Giới thiệu</a></li>
-        <li><a href="#services">Dịch vụ</a></li>
-        <li><a href="#projects">Dự án</a></li>
-        <li><a href="#contact">Báo giá</a></li>
-      </ul>
-    </nav>
-  </header>
+    <!-- 1. 네비게이션 바 (이미지 로고 적용) -->
+    <header>
+        <nav class="navbar">
+            <a href="index.html" class="logo">
+                <img src="logo-mixa.jpg" alt="Mixa88 Logo">
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#services">Dịch vụ</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#contact">Báo giá</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- 2. 메인 히어로 섹션 -->
-  <section class="hero" id="home">
-    <h1>Xây Dựng & Thiết Kế Nội Thất Chuyên Nghiệp</h1>
-    <p>Biến ngôi nhà mơ ước của bạn thành hiện thực với chi phí tối ưu nhất.</p>
-    <a href="#contact" class="btn-cta">Nhận tư vấn miễn phí</a>
-  </section>
+    <!-- 2. 메인 히어로 섹션 -->
+    <section class="hero" id="home">
+        <h1>Xây Dựng & Thiết Kế Nội Thất Chuyên Nghiệp</h1>
+        <p>Biến ngôi nhà mơ ước của bạn thành hiện thực với chi phí tối ưu nhất.</p>
+        <a href="#contact" class="btn-cta">Nhận tư vấn miễn phí</a>
+    </section>
 
-  <!-- 3. 주요 서비스 섹션 -->
-  <section class="services" id="services">
-    <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
-    <div class="service-grid">
-      <div class="service-card">
-        <i class="fa-solid fa-couch"></i>
-        <h3>Thiết kế & Thi công nội thất</h3>
-        <p>Tối ưu hóa không gian sống với phong cách hiện đại và sang trọng.</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-house-chimney"></i>
-        <h3>Xây nhà trọn gói</h3>
-        <p>Giải pháp xây dựng toàn diện từ bản vẽ thiết kế đến hoàn thiện bàn giao.</p>
-      </div>
-      <div class="service-card">
-        <i class="fa-solid fa-hammer"></i>
-        <h3>Cải tạo & Sửa chữa nhà ở</h3>
-        <p>Nâng cấp, làm mới không gian sống cũ kỹ trở nên hiện đại và tiện nghi.</p>
-      </div>
-    </div>
-  </section>
+    <!-- 3. 주요 서비스 섹션 -->
+    <section class="services" id="services">
+        <h2 class="section-title">Dịch Vụ Của Chúng Tôi</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-couch"></i>
+                <h3>Thiết kế & Thi công nội thất</h3>
+                <p>Tối ưu hóa không gian sống với phong cách hiện đại và sang trọng.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-house-chimney"></i>
+                <h3>Xây nhà trọn gói</h3>
+                <p>Giải pháp xây dựng toàn diện từ bản vẽ thiết kế đến hoàn thiện bàn giao.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-hammer"></i>
+                <h3>Cải tạo & Sửa chữa nhà ở</h3>
+                <p>Nâng cấp, làm mới không gian sống cũ kỹ trở nên hiện đại và tiện nghi.</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- 4. 푸터 -->
-  <footer>
-    <p>&copy; 2026 Mixa88.com. All rights reserved.</p>
-  </footer>
+    <!-- 4. 푸터 -->
+    <footer>
+        <p>&copy; 2026 Mixa88.com. All rights reserved.</p>
+    </footer>
 
-  <!-- 5. Zalo 플로팅 상담 버튼 (0123456789 부분에 실제 전화번호 입력) -->
-  <a href="https://zalo.me/0123456789" target="_blank" class="zalo-float">
-    <i class="fa-solid fa-comments"></i> Chat Zalo
-  </a>
+    <!-- 5. Zalo 플로팅 상담 버튼 -->
+    <a href="https://zalo.me/0123456789" target="_blank" class="zalo-float">
+        <i class="fa-solid fa-comments"></i> Chat Zalo
+    </a>
 
 </body>
 </html>
