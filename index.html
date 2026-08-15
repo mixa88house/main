@@ -4,13 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mixa88.com - Xây Dựng & Thiết Kế Nội Thất Chuyên Nghiệp</title>
-    
     <!-- 베트남어 지원 Google Fonts (Roboto) & FontAwesome 아이콘 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
     <style>
         /* 기본 스타일 초기화 및 스무스 스크롤 설정 */
         * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -21,27 +19,14 @@
         /* 헤더 & 네비게이션 */
         header { background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
         .navbar { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0.8rem 1.5rem; }
-        
-        /* 🎨 로고 스타일 고정 (70px 이상 고정 기준 유지) */
         .logo { display: flex; align-items: center; padding: 5px 0; }
         .logo img { height: 90px !important; min-height: 70px; width: auto; object-fit: contain; }
-
         .nav-menu { display: flex; list-style: none; gap: 1.5rem; }
         .nav-menu a { font-weight: 500; transition: color 0.3s; }
         .nav-menu a:hover { color: #2563eb; }
 
         /* 메인 히어로 섹션 */
-        .hero { 
-            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; 
-            min-height: 70vh; 
-            display: flex; 
-            flex-direction: column; 
-            justify-content: center; 
-            align-items: center; 
-            text-align: center; 
-            color: #fff; 
-            padding: 2rem 1rem; 
-        }
+        .hero { background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat; min-height: 70vh; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; color: #fff; padding: 2rem 1rem; }
         .hero h1 { font-size: 2.2rem; margin-bottom: 1rem; font-weight: 700; word-break: keep-all; }
         .hero p { font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; }
         .btn-cta { background: #2563eb; color: #fff; padding: 0.8rem 2rem; font-size: 1rem; border-radius: 5px; font-weight: 500; transition: background 0.3s; display: inline-block; }
@@ -53,30 +38,8 @@
         .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #2563eb; margin: 0.8rem auto 0; border-radius: 2px; }
 
         /* Giới thiệu (회사 소개) 섹션 */
-        .about-section {
-            position: relative;
-            background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), 
-                        url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat;
-            padding: 5rem 2rem;
-            border-radius: 16px;
-            color: #fff;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            margin-top: 3rem;
-            margin-bottom: 4rem;
-        }
-
-        .about-overlay-card {
-            max-width: 900px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 3rem;
-            border-radius: 12px;
-            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
-        }
-
+        .about-section { position: relative; background: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80') center/cover fixed no-repeat; padding: 5rem 2rem; border-radius: 16px; color: #fff; box-shadow: 0 10px 30px rgba(0,0,0,0.2); margin-top: 3rem; margin-bottom: 4rem; }
+        .about-overlay-card { max-width: 900px; margin: 0 auto; background: rgba(255, 255, 255, 0.1); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2); padding: 3rem; border-radius: 12px; box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37); }
         .about-overlay-card h2 { font-size: 2rem; color: #60a5fa; margin-bottom: 0.5rem; text-align: center; }
         .about-overlay-card h3 { font-size: 1.25rem; color: #f8fafc; margin-bottom: 2rem; text-align: center; font-weight: 400; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1rem; }
         .about-overlay-card p { margin-bottom: 1.2rem; color: #e2e8f0; text-align: justify; font-size: 1.05rem; line-height: 1.8; }
@@ -86,29 +49,9 @@
         .highlight-box p { font-size: 0.9rem; margin-bottom: 0; text-align: center; color: #cbd5e1; }
 
         /* Dịch vụ (서비스) 섹션 스타일 */
-        .service-grid { 
-            display: grid; 
-            grid-template-columns: repeat(3, 1fr); 
-            gap: 1.5rem; 
-        }
-
-        .service-card { 
-            background: #fff; 
-            border-radius: 10px; 
-            overflow: hidden; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.05); 
-            border: 1px solid #e2e8f0; 
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-        }
-
-        .service-card:hover { 
-            transform: translateY(-5px); 
-            box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12); 
-            border-color: #93c5fd;
-        }
-
+        .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+        .service-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12); border-color: #93c5fd; }
         .service-card-img { height: 160px; overflow: hidden; position: relative; }
         .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
         .service-card:hover .service-card-img img { transform: scale(1.06); }
@@ -116,26 +59,16 @@
         .service-card-content h3 { font-size: 1.15rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 700; }
         .service-card-content p { color: #64748b; font-size: 0.92rem; line-height: 1.6; text-align: left; }
 
-        /* ==================== PROJECTS CSS ==================== */
-        .projects-section {
-            padding: 80px 20px;
-            background: #f8f8f6;
-            max-width: 100%;
-            margin: 4rem 0 0;
-        }
-
+        /* PROJECTS CSS */
+        .projects-section { padding: 80px 20px; background: #f8f8f6; max-width: 100%; margin: 4rem 0 0; }
         .projects-container { max-width: 1200px; margin: auto; }
         .projects-heading { max-width: 700px; margin: 0 auto 50px; text-align: center; }
         .projects-subtitle { display: block; font-size: 13px; letter-spacing: 4px; font-weight: 600; color: #9b8058; margin-bottom: 15px; }
         .projects-heading h2 { font-size: 42px; font-weight: 600; margin: 0 0 20px; color: #222; }
         .projects-heading p { font-size: 16px; line-height: 1.8; color: #777; }
-
-        /* FILTER */
         .project-filter { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 45px; }
         .filter-btn { border: 1px solid #ddd; background: transparent; padding: 10px 22px; border-radius: 30px; cursor: pointer; font-size: 14px; transition: all .3s ease; }
         .filter-btn:hover, .filter-btn.active { background: #222; color: #fff; border-color: #222; }
-
-        /* GRID */
         .projects-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
         .project-card { background: #fff; cursor: pointer; overflow: hidden; transition: transform .35s ease, box-shadow .35s ease; border-radius: 8px; }
         .project-card:hover { transform: translateY(-7px); box-shadow: 0 18px 45px rgba(0,0,0,.12); }
@@ -145,13 +78,11 @@
         .project-overlay { position: absolute; inset: 0; background: rgba(0,0,0,.45); display: flex; align-items: center; justify-content: center; opacity: 0; transition: opacity .35s ease; }
         .project-card:hover .project-overlay { opacity: 1; }
         .project-overlay span { color: #fff; border: 1px solid rgba(255,255,255,.7); padding: 12px 25px; font-size: 13px; letter-spacing: 1px; border-radius: 4px; }
-
-        /* INFO */
         .project-info { padding: 20px; }
         .project-info span { font-size: 11px; letter-spacing: 1.5px; color: #9b8058; font-weight: 700; }
         .project-info h3 { margin: 6px 0 0; font-size: 18px; font-weight: 600; color: #222; }
 
-        /* ==================== MODAL ==================== */
+        /* MODAL */
         .project-modal { display: none; position: fixed; inset: 0; z-index: 99999; background: rgba(0,0,0,.82); padding: 40px 20px; overflow-y: auto; }
         .project-modal.show { display: block; }
         .modal-content { position: relative; max-width: 1050px; margin: auto; background: #fff; padding: 45px; border-radius: 12px; }
@@ -160,8 +91,6 @@
         .modal-header span { font-size: 12px; letter-spacing: 2px; color: #9b8058; font-weight: 700; }
         .modal-header h2 { font-size: 32px; margin: 8px 0; font-weight: 600; }
         .modal-header p { color: #666; line-height: 1.7; max-width: 750px; }
-
-        /* STAGES */
         .project-stages { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
         .stage-number { display: block; color: #9b8058; font-size: 13px; letter-spacing: 2px; margin-bottom: 6px; font-weight: 700; }
         .stage h3 { font-size: 16px; font-weight: 600; margin-bottom: 12px; }
@@ -182,18 +111,15 @@
             .project-stages { grid-template-columns: 1fr; }
             .modal-content { padding: 35px 20px; }
         }
-
         @media (max-width: 600px) {
             .navbar { flex-direction: column; gap: 0.8rem; padding: 0.8rem 1rem; }
             .logo img { height: 70px !important; max-width: 90%; }
             .nav-menu { gap: 0.8rem; font-size: 0.85rem; justify-content: center; flex-wrap: wrap; }
             .hero { min-height: 50vh; padding: 3rem 1rem; }
             .hero h1 { font-size: 1.5rem; }
-            
             .about-section { padding: 2rem 1rem; background-attachment: scroll; }
             .about-overlay-card { padding: 1.5rem 1rem; }
             .about-highlights { grid-template-columns: 1fr; gap: 0.8rem; }
-
             .service-grid { grid-template-columns: 1fr; }
             .projects-section { padding: 60px 15px; }
             .projects-grid { grid-template-columns: 1fr; gap: 20px; }
@@ -207,7 +133,7 @@
 </head>
 <body>
 
-    <!-- 1. 네비게이션 바 -->
+    <!-- 1. 네비게이션 바 (Giới thiệu 메뉴를 맨 오른쪽으로 이동) -->
     <header>
         <nav class="navbar">
             <a href="index.html" class="logo">
@@ -215,9 +141,9 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="#home">Trang chủ</a></li>
-                <li><a href="#about">Giới thiệu</a></li>
                 <li><a href="#services">Dịch vụ</a></li>
                 <li><a href="#projects">Dự án</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
             </ul>
         </nav>
     </header>
@@ -229,46 +155,7 @@
         <a href="https://zalo.me/0123456789" target="_blank" class="btn-cta">Nhận tư vấn miễn phí</a>
     </section>
 
-    <!-- 3. Giới thiệu (회사 소개) 섹션 -->
-    <section id="about" class="about-section">
-        <div class="about-overlay-card">
-            <h2>GIỚI THIỆU CÔNG TY</h2>
-            <h3>10 năm kinh nghiệm và uy tín – Kiến tạo không gian sống chất lượng.</h3>
-            
-            <p>
-                Với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng và nội thất, chúng tôi đã thực hiện nhiều dự án xây dựng nhà ở và thi công nội thất tại Đà Nẵng. Qua nhiều năm hoạt động, chúng tôi không ngừng tích lũy kinh nghiệm và nâng cao năng lực chuyên môn để mang đến cho khách hàng những công trình chất lượng, thẩm mỹ và bền vững.
-            </p>
-            <p>
-                Chúng tôi luôn đặt uy tín, chất lượng và trách nhiệm lên hàng đầu. Từ tư vấn, thiết kế đến thi công và hoàn thiện, mỗi công đoạn đều được thực hiện cẩn thận và chuyên nghiệp, đồng thời luôn lắng nghe nhu cầu và mong muốn riêng của từng khách hàng.
-            </p>
-            <p>
-                Với sự am hiểu về đặc điểm khí hậu, vật liệu và điều kiện thi công tại Đà Nẵng, cùng kinh nghiệm thực tế qua nhiều công trình, chúng tôi mang đến những giải pháp phù hợp, tối ưu chi phí và đảm bảo chất lượng lâu dài.
-            </p>
-            <p>
-                Trong tương lai, chúng tôi sẽ tiếp tục phát huy kinh nghiệm và năng lực của mình để trở thành đơn vị xây dựng và nội thất chuyên nghiệp, đáng tin cậy tại Đà Nẵng, đồng hành cùng khách hàng trong việc kiến tạo những không gian sống hoàn hảo.
-            </p>
-            <p style="font-weight: 500; color: #93c5fd; text-align: center; margin-top: 1.5rem;">
-                Ngôi nhà bạn mơ ước – chúng tôi đồng hành từ ý tưởng đến khi hoàn thiện.
-            </p>
-
-            <div class="about-highlights">
-                <div class="highlight-box">
-                    <h4>10+ Năm</h4>
-                    <p>Kinh nghiệm thực tế</p>
-                </div>
-                <div class="highlight-box">
-                    <h4>Đà Nẵng</h4>
-                    <p>Am hiểu địa phương</p>
-                </div>
-                <div class="highlight-box">
-                    <h4>100%</h4>
-                    <p>Tận tâm & Bền vững</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- 4. Dịch vụ (주요 서비스) 섹션 -->
+    <!-- 3. Dịch vụ (주요 서비스) 섹션 -->
     <section class="services" id="services">
         <h2 class="section-title">DỊCH VỤ CỦA CHÚNG TÔI</h2>
         <div class="service-grid">
@@ -302,146 +189,177 @@
         </div>
     </section>
 
-    <!-- 5. DỰ ÁN (포트폴리오) 섹션 -->
+    <!-- 4. DỰ ÁN (포트폴리오) 섹션 -->
     <section id="projects" class="projects-section">
-      <div class="projects-container">
-        <div class="projects-heading">
-          <span class="projects-subtitle">DỰ ÁN</span>
-          <h2>Những công trình tiêu biểu</h2>
-          <p>
-            Mỗi công trình là một dấu ấn riêng, được chăm chút từ thiết kế
-            đến thi công với sự kết hợp hài hòa giữa công năng và thẩm mỹ.
-          </p>
+        <div class="projects-container">
+            <div class="projects-heading">
+                <span class="projects-subtitle">DỰ ÁN</span>
+                <h2>Những công trình tiêu biểu</h2>
+                <p>Mỗi công trình là một dấu ấn riêng, được chăm chút từ thiết kế đến thi công với sự kết hợp hài hòa giữa công năng và thẩm mỹ.</p>
+            </div>
+            
+            <!-- CATEGORY -->
+            <div class="project-filter">
+                <button class="filter-btn active" data-filter="all">Tất cả</button>
+                <button class="filter-btn" data-filter="house">Nhà ở</button>
+                <button class="filter-btn" data-filter="villa">Biệt thự</button>
+                <button class="filter-btn" data-filter="interior">Nội thất</button>
+                <button class="filter-btn" data-filter="renovation">Cải tạo</button>
+            </div>
+
+            <!-- PROJECT GRID -->
+            <div class="projects-grid">
+                <!-- PROJECT 1 -->
+                <div class="project-card" data-category="house" onclick="openProject(0)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Modern Family House">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>NHÀ Ở · ĐÀ NẴNG</span>
+                        <h3>Modern Family House</h3>
+                    </div>
+                </div>
+
+                <!-- PROJECT 2 -->
+                <div class="project-card" data-category="villa" onclick="openProject(1)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Minimalist Villa">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>BIỆT THỰ · ĐÀ NẴNG</span>
+                        <h3>Minimalist Villa</h3>
+                    </div>
+                </div>
+
+                <!-- PROJECT 3 -->
+                <div class="project-card" data-category="house" onclick="openProject(2)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85" alt="Modern Townhouse">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>NHÀ PHỐ · ĐÀ NẴNG</span>
+                        <h3>Modern Townhouse</h3>
+                    </div>
+                </div>
+
+                <!-- PROJECT 4 -->
+                <div class="project-card" data-category="interior" onclick="openProject(3)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Contemporary Interior">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>NỘI THẤT · ĐÀ NẴNG</span>
+                        <h3>Contemporary Interior</h3>
+                    </div>
+                </div>
+
+                <!-- PROJECT 5 -->
+                <div class="project-card" data-category="renovation" onclick="openProject(4)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="House Renovation">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>CẢI TẠO · ĐÀ NẴNG</span>
+                        <h3>House Renovation</h3>
+                    </div>
+                </div>
+
+                <!-- PROJECT 6 -->
+                <div class="project-card" data-category="villa" onclick="openProject(5)">
+                    <div class="project-image">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary Villa">
+                        <div class="project-overlay">
+                            <span>Xem dự án</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <span>BIỆT THỰ · ĐÀ NẴNG</span>
+                        <h3>Contemporary Villa</h3>
+                    </div>
+                </div>
+            </div>
         </div>
+    </section>
 
-        <!-- CATEGORY -->
-        <div class="project-filter">
-          <button class="filter-btn active" data-filter="all">Tất cả</button>
-          <button class="filter-btn" data-filter="house">Nhà ở</button>
-          <button class="filter-btn" data-filter="villa">Biệt thự</button>
-          <button class="filter-btn" data-filter="interior">Nội thất</button>
-          <button class="filter-btn" data-filter="renovation">Cải tạo</button>
+    <!-- 5. Giới thiệu (회사 소개) 섹션 (맨 아래로 이동) -->
+    <section id="about" class="about-section">
+        <div class="about-overlay-card">
+            <h2>GIỚI THIỆU CÔNG TY</h2>
+            <h3>10 năm kinh nghiệm và uy tín – Kiến tạo không gian sống chất lượng.</h3>
+            <p>
+                Với hơn 10 năm kinh nghiệm trong lĩnh vực xây dựng và nội thất, chúng tôi đã thực hiện nhiều dự án xây dựng nhà ở và thi công nội thất tại Đà Nẵng. Qua nhiều năm hoạt động, chúng tôi không ngừng tích lũy kinh nghiệm và nâng cao năng lực chuyên môn để mang đến cho khách hàng những công trình chất lượng, thẩm mỹ và bền vững.
+            </p>
+            <p>
+                Chúng tôi luôn đặt uy tín, chất lượng và trách nhiệm lên hàng đầu. Từ tư vấn, thiết kế đến thi công và hoàn thiện, mỗi công đoạn đều được thực hiện cẩn thận và chuyên nghiệp, đồng thời luôn lắng nghe nhu cầu và mong muốn riêng của từng khách hàng.
+            </p>
+            <p>
+                Với sự am hiểu về đặc điểm khí hậu, vật liệu và điều kiện thi công tại Đà Nẵng, cùng kinh nghiệm thực tế qua nhiều công trình, chúng tôi mang đến những giải pháp phù hợp, tối ưu chi phí và đảm bảo chất lượng lâu dài.
+            </p>
+            <p>
+                Trong tương lai, chúng tôi sẽ tiếp tục phát huy kinh nghiệm và năng lực của mình để trở thành đơn vị xây dựng và nội thất chuyên nghiệp, đáng tin cậy tại Đà Nẵng, đồng hành cùng khách hàng trong việc kiến tạo những không gian sống hoàn hảo.
+            </p>
+            <p style="font-weight: 500; color: #93c5fd; text-align: center; margin-top: 1.5rem;">
+                Ngôi nhà bạn mơ ước – chúng tôi đồng hành từ ý tưởng đến khi hoàn thiện.
+            </p>
+            <div class="about-highlights">
+                <div class="highlight-box">
+                    <h4>10+ Năm</h4>
+                    <p>Kinh nghiệm thực tế</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>Đà Nẵng</h4>
+                    <p>Am hiểu địa phương</p>
+                </div>
+                <div class="highlight-box">
+                    <h4>100%</h4>
+                    <p>Tận tâm & Bền vững</p>
+                </div>
+            </div>
         </div>
-
-        <!-- PROJECT GRID -->
-        <div class="projects-grid">
-          <!-- PROJECT 1 -->
-          <div class="project-card" data-category="house" onclick="openProject(0)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85" alt="Modern Family House">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>NHÀ Ở · ĐÀ NẴNG</span>
-              <h3>Modern Family House</h3>
-            </div>
-          </div>
-
-          <!-- PROJECT 2 -->
-          <div class="project-card" data-category="villa" onclick="openProject(1)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85" alt="Minimalist Villa">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>BIỆT THỰ · ĐÀ NẴNG</span>
-              <h3>Minimalist Villa</h3>
-            </div>
-          </div>
-
-          <!-- PROJECT 3 -->
-          <div class="project-card" data-category="house" onclick="openProject(2)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85" alt="Modern Townhouse">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>NHÀ PHỐ · ĐÀ NẴNG</span>
-              <h3>Modern Townhouse</h3>
-            </div>
-          </div>
-
-          <!-- PROJECT 4 -->
-          <div class="project-card" data-category="interior" onclick="openProject(3)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85" alt="Contemporary Interior">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>NỘI THẤT · ĐÀ NẴNG</span>
-              <h3>Contemporary Interior</h3>
-            </div>
-          </div>
-
-          <!-- PROJECT 5 -->
-          <div class="project-card" data-category="renovation" onclick="openProject(4)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85" alt="House Renovation">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>CẢI TẠO · ĐÀ NẴNG</span>
-              <h3>House Renovation</h3>
-            </div>
-          </div>
-
-          <!-- PROJECT 6 -->
-          <div class="project-card" data-category="villa" onclick="openProject(5)">
-            <div class="project-image">
-              <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary Villa">
-              <div class="project-overlay">
-                <span>Xem dự án</span>
-              </div>
-            </div>
-            <div class="project-info">
-              <span>BIỆT THỰ · ĐÀ NẴNG</span>
-              <h3>Contemporary Villa</h3>
-            </div>
-          </div>
-
-        </div>
-      </div>
     </section>
 
     <!-- PROJECT MODAL POPUP -->
     <div id="projectModal" class="project-modal">
-      <div class="modal-content">
-        <button class="modal-close" onclick="closeProject()">×</button>
-
-        <div class="modal-header">
-          <span id="modalCategory"></span>
-          <h2 id="modalTitle"></h2>
-          <p id="modalDescription"></p>
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeProject()">×</button>
+            <div class="modal-header">
+                <span id="modalCategory"></span>
+                <h2 id="modalTitle"></h2>
+                <p id="modalDescription"></p>
+            </div>
+            <div class="project-stages">
+                <div class="stage">
+                    <span class="stage-number">01</span>
+                    <h3>Trước khi thi công</h3>
+                    <img id="beforeImage" src="" alt="Trước khi thi công">
+                </div>
+                <div class="stage">
+                    <span class="stage-number">02</span>
+                    <h3>Quá trình thi công</h3>
+                    <img id="processImage" src="" alt="Quá trình thi công">
+                </div>
+                <div class="stage">
+                    <span class="stage-number">03</span>
+                    <h3>Hoàn thiện</h3>
+                    <img id="afterImage" src="" alt="Hoàn thiện">
+                </div>
+            </div>
         </div>
-
-        <div class="project-stages">
-          <div class="stage">
-            <span class="stage-number">01</span>
-            <h3>Trước khi thi công</h3>
-            <img id="beforeImage" src="" alt="Trước khi thi công">
-          </div>
-          <div class="stage">
-            <span class="stage-number">02</span>
-            <h3>Quá trình thi công</h3>
-            <img id="processImage" src="" alt="Quá trình thi công">
-          </div>
-          <div class="stage">
-            <span class="stage-number">03</span>
-            <h3>Hoàn thiện</h3>
-            <img id="afterImage" src="" alt="Hoàn thiện">
-          </div>
-        </div>
-      </div>
     </div>
 
     <!-- 6. 푸터 -->
@@ -456,107 +374,98 @@
 
     <!-- PROJECT JAVASCRIPT -->
     <script>
-    const projects = [
-      {
-        category: "NHÀ Ở · ĐÀ NẴNG",
-        title: "Modern Family House",
-        description: "Thiết kế hiện đại, tối ưu công năng và tận dụng ánh sáng tự nhiên, mang đến không gian sống tiện nghi và thoáng đãng.",
-        before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-      },
-      {
-        category: "BIỆT THỰ · ĐÀ NẴNG",
-        title: "Minimalist Villa",
-        description: "Phong cách tối giản kết hợp vật liệu tự nhiên, tạo nên không gian sang trọng, tinh tế và gần gũi với thiên nhiên.",
-        before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-      },
-      {
-        category: "NHÀ PHỐ · ĐÀ NẴNG",
-        title: "Modern Townhouse",
-        description: "Giải pháp thiết kế thông minh dành cho nhà phố, tối ưu diện tích sử dụng và tạo sự thông thoáng cho từng không gian.",
-        before: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1590644365607-1c5a3a7e4f6d?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
-      },
-      {
-        category: "NỘI THẤT · ĐÀ NẴNG",
-        title: "Contemporary Interior",
-        description: "Không gian nội thất hiện đại, tinh tế với sự cân bằng giữa công năng, ánh sáng và vật liệu.",
-        before: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
-      },
-      {
-        category: "CẢI TẠO · ĐÀ NẴNG",
-        title: "House Renovation",
-        description: "Cải tạo và nâng cấp không gian sống cũ thành một không gian hiện đại, tiện nghi và phù hợp với nhu cầu mới.",
-        before: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
-      },
-      {
-        category: "BIỆT THỰ · ĐÀ NẴNG",
-        title: "Contemporary Villa",
-        description: "Kiến trúc hiện đại với đường nét tinh tế, không gian mở và sự kết hợp hài hòa giữa nội thất và ngoại thất.",
-        before: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85",
-        process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-        after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-      }
-    ];
+        const projects = [
+            {
+                category: "NHÀ Ở · ĐÀ NẴNG",
+                title: "Modern Family House",
+                description: "Thiết kế hiện đại, tối ưu công năng và tận dụng ánh sáng tự nhiên, mang đến không gian sống tiện nghi và thoáng đãng.",
+                before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+                after: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
+            },
+            {
+                category: "BIỆT THỰ · ĐÀ NẴNG",
+                title: "Minimalist Villa",
+                description: "Phong cách tối giản kết hợp vật liệu tự nhiên, tạo nên không gian sang trọng, tinh tế và gần gũi với thiên nhiên.",
+                before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85",
+                after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+            },
+            {
+                category: "NHÀ PHỐ · ĐÀ NẴNG",
+                title: "Modern Townhouse",
+                description: "Giải pháp thiết kế thông minh dành cho nhà phố, tối ưu diện tích sử dụng và tạo sự thông thoáng cho từng không gian.",
+                before: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1590644365607-1c5a3a7e4f6d?auto=format&fit=crop&w=1200&q=85",
+                after: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+            },
+            {
+                category: "NỘI THẤT · ĐÀ NẴNG",
+                title: "Contemporary Interior",
+                description: "Không gian nội thất hiện đại, tinh tế với sự cân bằng giữa công năng, ánh sáng và vật liệu.",
+                before: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
+                after: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
+            },
+            {
+                category: "CẢI TẠO · ĐÀ NẴNG",
+                title: "House Renovation",
+                description: "Cải tạo và nâng cấp không gian sống cũ thành một không gian hiện đại, tiện nghi và phù hợp với nhu cầu mới.",
+                before: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85",
+                after: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
+            },
+            {
+                category: "BIỆT THỰ · ĐÀ NẴNG",
+                title: "Contemporary Villa",
+                description: "Kiến trúc hiện đại với đường nét tinh tế, không gian mở và sự kết hợp hài hòa giữa nội thất và ngoại thất.",
+                before: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85",
+                process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+                after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+            }
+        ];
 
-    /* FILTER */
-    document.querySelectorAll(".filter-btn").forEach(button => {
-      button.addEventListener("click", function() {
-        document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
-        this.classList.add("active");
-        const filter = this.dataset.filter;
-
-        document.querySelectorAll(".project-card").forEach(card => {
-          if (filter === "all" || card.dataset.category === filter) {
-            card.style.display = "block";
-          } else {
-            card.style.display = "none";
-          }
+        /* FILTER */
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            button.addEventListener("click", function() {
+                document.querySelectorAll(".filter-btn").forEach(btn => btn.classList.remove("active"));
+                this.classList.add("active");
+                const filter = this.dataset.filter;
+                document.querySelectorAll(".project-card").forEach(card => {
+                    if (filter === "all" || card.dataset.category === filter) {
+                        card.style.display = "block";
+                    } else {
+                        card.style.display = "none";
+                    }
+                });
+            });
         });
-      });
-    });
 
-    /* OPEN PROJECT */
-    function openProject(index) {
-      const project = projects[index];
-      document.getElementById("modalCategory").textContent = project.category;
-      document.getElementById("modalTitle").textContent = project.title;
-      document.getElementById("modalDescription").textContent = project.description;
-      document.getElementById("beforeImage").src = project.before;
-      document.getElementById("processImage").src = project.process;
-      document.getElementById("afterImage").src = project.after;
+        /* OPEN PROJECT */
+        function openProject(index) {
+            const project = projects[index];
+            document.getElementById("modalCategory").textContent = project.category;
+            document.getElementById("modalTitle").textContent = project.title;
+            document.getElementById("modalDescription").textContent = project.description;
+            document.getElementById("beforeImage").src = project.before;
+            document.getElementById("processImage").src = project.process;
+            document.getElementById("afterImage").src = project.after;
+            document.getElementById("projectModal").classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
 
-      document.getElementById("projectModal").classList.add("show");
-      document.body.style.overflow = "hidden";
-    }
+        /* CLOSE PROJECT */
+        function closeProject() {
+            document.getElementById("projectModal").classList.remove("show");
+            document.body.style.overflow = "auto";
+        }
 
-    /* CLOSE */
-    function closeProject() {
-      document.getElementById("projectModal").classList.remove("show");
-      document.body.style.overflow = "";
-    }
-
-    /* CLOSE WHEN CLICKING OUTSIDE */
-    document.getElementById("projectModal").addEventListener("click", function(e) {
-      if (e.target === this) {
-        closeProject();
-      }
-    });
-
-    /* ESC KEY */
-    document.addEventListener("keydown", function(e) {
-      if (e.key === "Escape") {
-        closeProject();
-      }
-    });
+        window.onclick = function(event) {
+            const modal = document.getElementById("projectModal");
+            if (event.target === modal) {
+                closeProject();
+            }
+        };
     </script>
 </body>
 </html>
