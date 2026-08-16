@@ -364,13 +364,16 @@
             </div>
             
             <!-- CATEGORY -->
-            <div class="project-filter">
-                <button class="filter-btn active" data-filter="all">Tất cả</button>
-                <button class="filter-btn" data-filter="house">Nhà ở</button>
-                <button class="filter-btn" data-filter="villa">Biệt thự</button>
-                <button class="filter-btn" data-filter="interior">Nội thất</button>
-                <button class="filter-btn" data-filter="renovation">Cải tạo</button>
-            </div>
+<div class="project-filter">
+  <button class="filter-btn active" data-filter="all">Tất cả</button>
+  <button class="filter-btn" data-filter="house">Nhà ở</button>
+  <button class="filter-btn" data-filter="villa">Biệt thự</button>
+  <button class="filter-btn" data-filter="interior">Nội thất</button>
+  <button class="filter-btn" data-filter="renovation">Cải tạo</button>
+  <!-- ✨ 구축 매입 & 리모델링 카테고리 추가 -->
+  <button class="filter-btn" data-filter="acquisition">Thu mua &amp; Cải tạo</button>
+</div>
+            
 
             <!-- PROJECT GRID -->
             <div class="projects-grid">
@@ -452,6 +455,21 @@
                             <span>Xem dự án</span>
                         </div>
                     </div>
+
+<!-- PROJECT 7: 구축 건물/주택 매입 및 리모델링 예시 -->
+<div class="project-card" data-category="acquisition" onclick="openProject(6)">
+  <div class="project-image">
+    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85" alt="Thu mua & Cải tạo Tòa nhà cũ">
+    <div class="project-overlay">
+      <span>Xem dự án</span>
+    </div>
+  </div>
+  <div class="project-info">
+    <span>THU MUA &amp; CẢI TẠO · ĐÀ NẴNG</span>
+    <h3>Dự Án Thu Mua &amp; Cải Tạo Tòa Nhà Cũ</h3>
+  </div>
+</div>
+                    
                     <div class="project-info">
                         <span>BIỆT THỰ · ĐÀ NẴNG</span>
                         <h3>Contemporary Villa</h3>
@@ -600,7 +618,17 @@
                 before: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85",
                 process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
                 after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-            }
+            },
+
+            {
+  category: "THU MUA & CẢI TẠO · ĐÀ NẴNG",
+  title: "Dự Án Thu Mua & Cải Tạo Tòa Nhà Cũ",
+  description: "Thu mua tòa nhà cũ xuống cấp, tiến hành thiết kế cải tạo toàn bộ kiến trúc & nội thất, biến không gian cũ thành bất động sản giá trị cao sẵn sàng giao dịch.",
+  before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+  process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+  after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+}
+            
         ];
 
         /* FILTER */
