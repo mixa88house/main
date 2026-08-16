@@ -447,37 +447,36 @@
                     </div>
                 </div>
 
-                <!-- PROJECT 6 -->
-                <div class="project-card" data-category="villa" onclick="openProject(5)">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85" alt="Contemporary Villa">
-                        <div class="project-overlay">
-                            <span>Xem dự án</span>
-                        </div>
-                    </div>
+        <!-- PROJECT 6: Contemporary Villa -->
+      <div class="project-card" data-category="villa" onclick="openProject(5)">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Contemporary Villa">
+          <div class="project-overlay">
+            <span>Xem dự án</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span>BIỆT THỰ · ĐÀ NẴNG</span>
+          <h3>Contemporary Villa</h3>
+        </div>
+      </div>
 
-<!-- PROJECT 7: 구축 건물/주택 매입 및 리모델링 예시 -->
-<div class="project-card" data-category="acquisition" onclick="openProject(6)">
-  <div class="project-image">
-    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85" alt="Thu mua & Cải tạo Tòa nhà cũ">
-    <div class="project-overlay">
-      <span>Xem dự án</span>
+      <!-- PROJECT 7: Thu mua & Cải tạo -->
+      <div class="project-card" data-category="acquisition" onclick="openProject(6)">
+        <div class="project-image">
+          <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Thu mua &amp; Cải tạo Tòa nhà cũ">
+          <div class="project-overlay">
+            <span>Xem dự án</span>
+          </div>
+        </div>
+        <div class="project-info">
+          <span>THU MUA &amp; CẢI TẠO · ĐÀ NẴNG</span>
+          <h3>Dự Án Thu Mua &amp; Cải Tạo Tòa Nhà Cũ</h3>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="project-info">
-    <span>THU MUA &amp; CẢI TẠO · ĐÀ NẴNG</span>
-    <h3>Dự Án Thu Mua &amp; Cải Tạo Tòa Nhà Cũ</h3>
-  </div>
-</div>
-                    
-                    <div class="project-info">
-                        <span>BIỆT THỰ · ĐÀ NẴNG</span>
-                        <h3>Contemporary Villa</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+</section>
 
     <!-- 5. ✨ 리뉴얼된 GIỚI THIỆU CÔNG TY 섹션 ✨ -->
     <section id="about" class="about-section">
@@ -582,64 +581,49 @@
 
     <!-- PROJECT JAVASCRIPT -->
     <script>
+       
         const projects = [
-            {
-                category: "NHÀ Ở · ĐÀ NẴNG",
-                title: "Modern Family House",
-                description: "Thiết kế hiện đại, tối ưu công năng và tận dụng ánh sáng tự nhiên, mang đến không gian sống tiện nghi và thoáng đãng.",
-                before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-                after: "https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-                category: "BIỆT THỰ · ĐÀ NẴNG",
-                title: "Minimalist Villa",
-                description: "Phong cách tối giản kết hợp vật liệu tự nhiên, tạo nên không gian sang trọng, tinh tế và gần gũi với thiên nhiên.",
-                before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1200&q=85",
-                after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-                category: "NHÀ PHỐ · ĐÀ NẴNG",
-                title: "Modern Townhouse",
-                description: "Giải pháp thiết kế thông minh dành cho nhà phố, tối ưu diện tích sử dụng và tạo sự thông thoáng cho từng không gian.",
-                before: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-                after: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-                category: "NỘI THẤT · ĐÀ NẴNG",
-                title: "Contemporary Interior",
-                description: "Không gian nội thất hiện đại, tinh tế với sự cân bằng giữa công năng, ánh sáng và vật liệu.",
-                before: "https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80",
-                after: "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-                category: "CẢI TẠO · ĐÀ NẴNG",
-                title: "House Renovation",
-                description: "Cải tạo và nâng cấp không gian sống cũ thành một không gian hiện đại, tiện nghi và phù hợp với nhu cầu mới.",
-                before: "https://images.unsplash.com/photo-1560185008-b033106af5c3?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1200&q=85",
-                after: "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85"
-            },
-            {
-                category: "BIỆT THỰ · ĐÀ NẴNG",
-                title: "Contemporary Villa",
-                description: "Kiến trúc hiện đại với đường nét tinh tế, không gian mở và sự kết hợp hài hòa giữa nội thất và ngoại thất.",
-                before: "https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=1200&q=85",
-                process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-                after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-            },
+  {
+    category: "NHÀ Ở · ĐÀ NẴNG",
+    title: "Mixa House - Không Gian Sống Hiện Đại",
+    description: "Dự án thiết kế và thi công trọn gói nhà phố hiện đại tại Đà Nẵng, tối ưu ánh sáng tự nhiên và công năng sử dụng.",
+    before: "https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=1200&q=85",
+    process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+  },
+  {
+    category: "BIỆT THỰ · ĐÀ NẴNG",
+    title: "Contemporary Villa - Biệt Thự Sang Trọng",
+    description: "Biệt thự cao cấp mang phong cách kiến trúc hiện đại, kết hợp hài hòa giữa không gian xanh và nội thất sang trọng.",
+    before: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1200&q=85",
+    process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    after: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85"
+  },
+  {
+    category: "NỘI THẤT · ĐÀ NẴNG",
+    title: "Minimalist Apartment - Căn Hộ Tối Giản",
+    description: "Thiết kế nội thất căn hộ cao cấp theo phong cách Tối giản (Minimalism), tinh tế và tối ưu diện tích.",
+    before: "https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=1200&q=85",
+    process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    after: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=1200&q=85"
+  },
+  {
+    category: "CẢI TẠO · ĐÀ NẴNG",
+    title: "Renovation Project - Cải Tạo Nhà Phố Cũ",
+    description: "Dự án lột xác hoàn toàn cho căn nhà phố 3 tầng xuống cấp, nâng cấp toàn bộ kiến trúc và nội thất.",
+    before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+    process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    after: "https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=1200&q=85"
+  },
+  {
+    category: "THU MUA & CẢI TẠO · ĐÀ NẴNG",
+    title: "Dự Án Thu Mua & Cải Tạo Tòa Nhà Cũ",
+    description: "Thu mua tòa nhà cũ xuống cấp, tiến hành thiết kế cải tạo toàn bộ kiến trúc & nội thất, biến không gian cũ thành bất động sản giá trị cao.",
+    before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
+    process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
+    after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
+  }
 
-            {
-  category: "THU MUA & CẢI TẠO · ĐÀ NẴNG",
-  title: "Dự Án Thu Mua & Cải Tạo Tòa Nhà Cũ",
-  description: "Thu mua tòa nhà cũ xuống cấp, tiến hành thiết kế cải tạo toàn bộ kiến trúc & nội thất, biến không gian cũ thành bất động sản giá trị cao sẵn sàng giao dịch.",
-  before: "https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=1200&q=85",
-  process: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=85",
-  after: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=85"
-}
             
         ];
 
