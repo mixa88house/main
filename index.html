@@ -32,15 +32,16 @@
     .section-title { text-align: center; font-size: 2rem; margin-bottom: 2.5rem; color: #1e3a8a; font-weight: 700; position: relative; }
     .section-title::after { content: ''; display: block; width: 60px; height: 3px; background: #2563eb; margin: 0.8rem auto 0; border-radius: 2px; }
 
-    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; }
+    /* 서비스 4개 카드를 1열로 그리드 설정 */
+    .service-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.2rem; }
     .service-card { background: #fff; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05); border: 1px solid #e2e8f0; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
     .service-card:hover { transform: translateY(-5px); box-shadow: 0 8px 20px rgba(37, 99, 235, 0.12); border-color: #93c5fd; }
     .service-card-img { height: 160px; overflow: hidden; position: relative; }
     .service-card-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
     .service-card:hover .service-card-img img { transform: scale(1.06); }
-    .service-card-content { padding: 1.2rem 1.2rem 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
-    .service-card-content h3 { font-size: 1.15rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 700; }
-    .service-card-content p { color: #64748b; font-size: 0.92rem; line-height: 1.6; text-align: left; }
+    .service-card-content { padding: 1.2rem 1rem 1.5rem; flex-grow: 1; display: flex; flex-direction: column; }
+    .service-card-content h3 { font-size: 1.05rem; color: #0f172a; margin-bottom: 0.6rem; font-weight: 700; word-break: keep-all; }
+    .service-card-content p { color: #64748b; font-size: 0.88rem; line-height: 1.5; text-align: left; }
 
     .projects-section { padding: 80px 20px; background: #f8f8f6; max-width: 100%; margin: 4rem 0 0; }
     .projects-container { max-width: 1200px; margin: auto; }
@@ -103,6 +104,9 @@
     .zalo-float { position: fixed; bottom: 20px; right: 20px; background: #0068ff; color: white; border-radius: 50px; padding: 10px 18px; display: flex; align-items: center; gap: 8px; box-shadow: 0 4px 10px rgba(0,0,0,0.3); font-weight: bold; font-size: 0.9rem; z-index: 1000; transition: transform 0.3s; }
     .zalo-float:hover { transform: scale(1.05); }
 
+    @media (max-width: 1024px) {
+      .service-grid { grid-template-columns: repeat(2, 1fr); }
+    }
     @media (max-width: 992px) { .about-container { grid-template-columns: 1fr; gap: 2.5rem; } .about-main-title { font-size: 2.2rem; } .about-section { padding: 4rem 1.5rem; } }
     @media (max-width: 600px) {
       .navbar { flex-direction: column; gap: 0.8rem; padding: 0.8rem 1rem; }
@@ -150,10 +154,11 @@
     <p>Biến ngôi nhà mơ ước của bạn thành hiện thực với chi phí tối ưu nhất.</p>
   </section>
 
-  <!-- 3. SERVICES -->
+  <!-- 3. SERVICES (4개 카드 1열 배치) -->
   <section class="services" id="services">
     <h2 class="section-title">DỊCH VỤ CỦA CHÚNG TÔI</h2>
     <div class="service-grid">
+      <!-- CARD 1 -->
       <div class="service-card">
         <div class="service-card-img">
           <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=800&q=80" alt="Thiết kế & Thi công nội thất">
@@ -163,6 +168,7 @@
           <p>Thiết kế và thi công nội thất theo nhu cầu, tối ưu không gian với phong cách hiện đại, tiện nghi và tinh tế.</p>
         </div>
       </div>
+      <!-- CARD 2 -->
       <div class="service-card">
         <div class="service-card-img">
           <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=800&q=80" alt="Xây nhà trọn gói">
@@ -172,6 +178,7 @@
           <p>Cung cấp giải pháp xây nhà trọn gói từ thiết kế đến thi công và hoàn thiện, đảm bảo chất lượng, tiến độ và chi phí hợp lý.</p>
         </div>
       </div>
+      <!-- CARD 3 -->
       <div class="service-card">
         <div class="service-card-img">
           <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&w=800&q=80" alt="Cải tạo & Sửa chữa nhà ở">
@@ -179,6 +186,16 @@
         <div class="service-card-content">
           <h3>Cải tạo & Sửa chữa nhà ở</h3>
           <p>Cải tạo và nâng cấp không gian sống, mang đến diện mạo mới hiện đại, tiện nghi và phù hợp với nhu cầu sử dụng.</p>
+        </div>
+      </div>
+      <!-- CARD 4 (새로 추가된 카드) -->
+      <div class="service-card">
+        <div class="service-card-img">
+          <img src="https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&w=800&q=80" alt="Thu mua & Bán bất động sản">
+        </div>
+        <div class="service-card-content">
+          <h3>Thu mua & Bán bất động sản</h3>
+          <p>Thu mua nhà cũ, tòa nhà cũ xuống cấp 및 cải tạo hoàn thiện để bán/kinh doanh bất động sản chất lượng cao.</p>
         </div>
       </div>
     </div>
